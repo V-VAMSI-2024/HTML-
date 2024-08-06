@@ -13,31 +13,32 @@
    
 
     <hr width="40%" color="orange">
+    <form  action="" method="get" >
     
     <table align="center" cellspacing="25" bgcolor="silver">
         <tr>
-            <td>First Name :</td>
+            <td><label for="id1">First Name :</label></td>
 
             <td>
-                <input type="text" size="40" placeholder="Enter First Name">
+                <input type="text" size="40" placeholder="Enter First Name" name="text" id="id1" required>
             </td>
         </tr>
         <tr>
-            <td>Last Name :</td>
+            <td><label for="id2">Last Name :</label> </td>
 
             <td>
-                <input type="text" size="40" placeholder="Enter Last Name">
+                <input type="text" size="40" placeholder="Enter Last Name" name="text" id="id2" required>
             </td>
         </tr>
         <tr>
-            <td>Screen Name</td>
+            <td><label for="id3">Screen Name</label></td>
 
             <td>
-                <input type="text" size="40" placeholder="Enter Screen Name">
+                <input type="text" size="40" placeholder="Enter Screen Name" name="text" id="id3" required>
             </td>
         </tr>
         <tr>
-            <td>Date of Birth</td>
+            <td><label for="">Date of Birth</label></td>
 
             <td>
                 <select>
@@ -67,13 +68,33 @@
                     <option value="9">9</option>
                     <option value="10">10</option>
                     <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                    <option value="31">31</option>
                 </select>
                 <select>
                     <option value="1985">1985</option>
                     <option value="1986">1986</option>
-                    <option value="1987">2</option>
-                    <option value="1988">3</option>
-                    <option value="1989">4</option>
+                    <option value="1987">1987</option>
+                    <option value="1988">1988</option>
+                    <option value="1989">1989</option>
                     <option value="1990">1990</option>
                     <option value="1991">1991</option>
                     <option value="1992">1992</option>
@@ -115,15 +136,15 @@
             
         </tr>
         <tr>
-            <td>Gender</td>
+            <td><label for="id4">Gender</label></td>
         
             <td>
-                <input type="radio" value="Male"> Male
-                <input type="radio" value="FeMale"> FeMale
+                <input type="radio" value="Male" name="v4" id="id4"> Male
+                <input type="radio" value="Female"  name="v4" id="id5"> FeMale
             </td>
         </tr>
         <tr>
-            <td>Country</td>
+            <td><label for="">Country</label></td>
         
             <td>
                 <select>
@@ -139,49 +160,51 @@
             </td>
         </tr>
         <tr>
-            <td>Email</td>
+            <td><label for="id6">Email</label></td>
 
             <td>
-                <input type="email" size="40" placeholder="Enter email">
+                <input type="email" size="40" placeholder="Enter email" name="v6" id="id6" required>
             </td>
         </tr>
         <tr>
-            <td>Phone</td>
+            <td><label for="id7">Phone</label></td>
 
             <td>
-                <input type="email" size="40" placeholder="Enter Phone">
+                <input type="number" size="40" placeholder="Enter Phone" name="number" id="id7" required>
             </td>
         </tr>
         <tr>
-            <td>password</td>
+            <td><label for="id8">password</label></td>
 
             <td>
-                <input type="password" size="40">
+                <input type="password" size="40" name="password" id="id8" required>
             </td>
         </tr>
         <tr>
-            <td>Confirm password</td>
+            <td><label for="id9">Confirm password</label></td>
 
             <td>
-                <input type="password" size="40">
+                <input type="password" size="40" name="cpassword" id="id9" required>
             </td>
         </tr>
         <tr>
             <td></td>
 
             <td>
-                <input type="checkbox" > i agree to the Tearms of use
+                <input type="checkbox"  > i agree to the Tearms of use
             </td>
         </tr>
     </table>
+
     
     <hr width="40%" color="green">
     
     
     <footer align="center"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
-        <input type="button" value="submit">
-            <input type="button" value="cancel">
+        <input type="submit" value="submit" >
+            <input type="reset" value="cancel" >
     </footer>
+</form> 
     
 </body>
 </html>

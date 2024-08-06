@@ -12,70 +12,73 @@
     </header>
     <hr>
     <br><br>
-    <caption>
+
+
         <h2 align="center"><u>Registration Form</u></h2>
-    </caption>
-    <table align="center" cellpadding="6" cellspacing="6">
+
+        <form action="" method="get">
+   
+    <table align="center" cellpadding="6" cellspacing="6" bgcolor="gold">
         <tr>
-            <td>First Name :</td>
+            <td><label for="k1">First Name :</label></td>
 
             <td>
-                <input type="text">
+                <input type="text" name="text" id="k1" required>
             </td>
         </tr>
         <tr>
-            <td>Last Name :</td>
+            <td><label for="k2">Last Name :</label></td>
 
             <td>
-                <input type="text">
+                <input type="text" name="text" id="k2" required>
             </td>
         </tr>
         <tr>
-            <td>Nick Name :</td>
+            <td><label for="k3">Nick Name :</label></td>
 
             <td>
-                <input type="text">
+                <input type="text" name="text" id="k3" required>
             </td>
         </tr>
         <tr>
-            <td>E-mail Name :</td>
+            <td><label for="k4">E-mail Name :</label></td>
 
             <td>
-                <input type="email">
+                <input type="email"  name="email" id="k4" required>
             </td>
         </tr>
         <tr>
-            <td>Password :</td>
+            <td><label for="k5">Password :</label></td>
 
             <td>
-                <input type="password">
+                <input type="password" name="password" id="k5" required>
             </td>
         </tr>
         <tr>
-            <td>Date of Birth</td>
+            <td><label for="k6">Date of Birth</label></td>
 
             <td>
-                <input type="number">
+                <input type="date" name="date" id="k5" required>
             </td>
         </tr>
         <tr>
-            <td>Gender</td>
+            <td><label for="k7">Gender</label></td>
 
             <td>
-                <input type="radio" value="male"> Male
-                <input type="radio" value="female">Female
-                <input type="radio" value="others">Others
+                <input type="radio" value="male" name="radio" id="k7"> Male
+                <input type="radio" value="female" name="radio" id="k8">Female
+                <input type="radio" value="others" name="radio" id="k9">Others
             </td>
         </tr>
         <tr>
-            <td>Mobile </td>
+            <td><label for="k10">Mobile</label> </td>
 
             <td>
-                <input type="number">
+                <input type="number" name="number" id="k10">
             </td>
         </tr>
         <tr>
-            <td>Address</td>
+            <td><label for="">Address</label></td>
 
             <td>
                 <textarea cols="20" rows="2"></textarea>
@@ -83,17 +86,19 @@
         </tr>
         <tr>
             <td></td>
-            <td><input type="button" value="Submit" >&nbsp &nbsp
+            <td><input type="submit" value="Submit" >&nbsp &nbsp
                 &nbsp &nbsp &nbsp &nbsp &nbsp
 
 
-                <input type="button" value="reset">
+                <input type="submit" value="reset">
             </td>
 
         </tr>
 
 
-    </table><br><br>
+    </table>
+</form>
+<br><br>
     <hr>
     <footer>
         <P>
