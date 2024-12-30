@@ -1,0 +1,993 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body {
+    line-height: 1.6;
+    background-color: #f4f7fa;
+    color: #333;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 50px;
+}
+
+.cta-buttons {
+    display: inline-block;
+    position: relative;
+}
+
+.cta-btn {
+    position: relative;
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.cta-btn:hover {
+    background-color: #0056b3;
+}
+
+.register-text {
+    display: inline; /* Keep this text visible initially */
+}
+
+.hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5); /* Light gray color */
+    visibility: hidden; /* Initially hidden */
+    transition: visibility 0.3s ease;
+}
+
+.cta-btn:hover .register-text {
+    visibility: hidden; /* Hide 'Register Now' text on hover */
+}
+
+.cta-btn:hover .hover-text {
+    visibility: visible; /* Show 'Double Click' text on hover */
+}
+
+
+
+/* Success message styling */
+.success-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+
+/* Initial styling for event-detail */
+.event-detail {
+    background-color: #FBB03B; 
+    transition: background-color 0.3s ease; 
+    transform: scale(1); 
+    transition: transform 0.3s ease-in-out; /
+}
+/* Hover effect for event-detail with background color change and zoom + bounce */
+.event-detail:hover {
+    background-color: #1bffff; 
+    transform: scale(1.1); 
+    animation: bounce 0.5s ease; 
+}
+/* Bounce Animation */
+@keyframes bounce {
+    0% {
+       
+        transform: scale(1.1); 
+    }
+    30% {
+        transform: scale(1.1); 
+    }
+    50% {
+        transform: scale(1.1); 
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1.0);
+    }
+}
+.details-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+.event-detail {
+    width: 30%;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.event-detail h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.event-detail p {
+    font-size: 1rem;
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.event-objectives {
+    background-color: #0056b3;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.event-objectives h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.event-objectives p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+.event-objectives p {
+    opacity: 0; 
+    transform: translateX(100%); 
+    animation: bounceRight 1s ease-out forwards; 
+}
+
+.event-objectives h2 {
+    opacity: 0; 
+    transform: translateX(-100%); 
+    animation: bounceLeft 1s ease-out forwards; 
+}
+
+/* Keyframes for bouncing the <p> from right */
+@keyframes bounceRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%); 
+    }
+    40% {
+        opacity: 1;
+        transform: translateX(-10%); 
+    }
+    60% {
+        transform: translateX(5%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+/* Keyframes for bouncing the <h2> from left */
+@keyframes bounceLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%); 
+    }
+    40% {
+        opacity: 1;
+        transform: translateX(10%);
+    }
+    60% {
+        transform: translateX(-5%);
+     }
+    100% {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+}
+/* Keynote Speakers */
+.keynote-speakers {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+.speakers-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.speaker-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+.speaker-card img {
+    width: 100%;
+   
+    border-radius: 20% 10%;
+    height: 250px;
+    object-fit: cover;
+    animation: bounce 1s infinite; /* Add bounce animation */
+}
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0); 
+    }
+    50% {
+        transform: translateY(-10px); 
+    }
+}
+.speaker-card h3 {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+.speaker-card p {
+    font-size: 1rem;
+}
+/* Sponsors Section */
+.sponsors {
+    background-color: #f8f8f8;
+    padding: 50px 20px;
+    text-align: center;
+}
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.sponsors-container img {
+    max-width: 300px;
+    max-height: 100%;
+}
+.payment-section {
+    margin: 50px auto;
+    padding: 20px;
+    max-width: 500px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+.payment-container {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+input[type="number"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button#payment-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button#payment-button:hover {
+    background-color: #218838;
+}
+
+.payment-message {
+    margin-top: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.payment-message p {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.payment-message p[style="color: red;"] {
+    background-color: #f8d7da;
+}
+
+.payment-message p[style="color: red;"] {
+    background-color: #d4edda;
+}
+
+/* Contact Us Section */
+.contact-section {
+    background-color: #fff;
+    padding: 40px 20px;
+    margin-top: 50px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.form-group textarea {
+    resize: vertical;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: #0056b3;
+}
+/* Social Links */
+.social-links {
+    margin-top: 30px;
+}
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 1.1rem;
+    
+}
+/* Card container styling */
+.blog-cards {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+/* Basic styling for each card */
+.card {
+    position: relative;
+    width: 300px;
+    height: 500px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+   
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30% 20%;
+}
+.card h3 {
+    font-size: 1.6rem;
+    margin: 20px 0;
+}
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+.card a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    display: inline-block;
+}
+/* Bounce animation on hover */
+.card:hover {
+    animation: bounce 0.6s ease-in-out;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.464);
+}
+/* Bounce animation keyframes */
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    25% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    75% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.card {
+    background-color: #f9f9f9;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius:30% 2%;
+}
+.card h3 {
+    margin: 15px 0;
+    color: #007BFF;
+}
+.card p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 15px;
+}
+.card a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+.card a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 50px;
+}
+ .hero {
+    position: relative;
+    height: 100vh; 
+    background-image: url('/src/JNV.jpg'); 
+    background-size: cover; 
+    background-position: 100% center; 
+    color: white; 
+    text-align: center;
+    animation: slideIn 2s ease-out forwards; 
+}
+/* Keyframes for background image slide effect */
+@keyframes slideIn {
+    0% {
+        background-position: 100% center; 
+    }
+    100% {
+        background-position: center center; 
+    }
+}
+.hero-content {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); /* Exactly center */
+    z-index: 10;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+.hero img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+.cta-buttons .cta-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    margin: 70px;
+    margin-right: 0px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+.cta-buttons .cta-btn:hover {
+    background-color: #0056b3;
+}
+/* FAQ Section */
+.faq-section {
+    padding: 40px 20px;
+    
+    max-width: 800px;
+    margin: 500px auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(153, 0, 255, 0.419);
+}
+#faq
+{
+    margin: 100px auto;
+}
+.faq-section h2 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    text-align: center;
+    margin: 30px;
+    font-weight: bold;
+}
+/* Accordion Container */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+/* Accordion Item */
+.accordion-item {
+    background-color: #fff;
+    border: 2px solid #007BFF;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+/* Hide the checkbox */
+.accordion-toggle {
+    display: none;
+}
+/* Accordion Header */
+.accordion-header {
+    background-color: #007BFF;
+    color: white;
+    padding: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align:left;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.accordion-header:hover {
+    background-color: #0056b3;
+}
+
+.plus-symbol {
+    font-size: 1.8rem;
+    transition: transform 0.3s ease;
+}
+/* Accordion Content */
+.accordion-content {
+    padding: 15px;
+    background-color: #f1f1f1;
+    display: none;
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
+    border-top: 1px solid #007BFF;
+}
+/* Show content when checkbox is checked */
+.accordion-toggle:checked + .accordion-header + .accordion-content {
+    display: block;
+}
+/* Rotate the plus symbol to an "X" */
+.accordion-toggle:checked + .accordion-header .plus-symbol {
+    transform: rotate(45deg); 
+}
+.accordion-item {
+    border-color: #007BFF;
+}
+.accordion-item:has(.accordion-toggle:checked) {
+    border-color: #0056b3;
+}
+.accordion-item:has(.accordion-toggle:checked) .accordion-header {
+    background-color: #0056b3;
+}
+.accordion-item:has(.accordion-toggle:checked) .accordion-content {
+    background-color: #e9f4ff;
+    border-top: 2px solid #0056b3;
+}
+/* Add to your existing CSS */
+.faq-section {
+    position: relative;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden; 
+}
+/* Create the bubble background animation */
+.faq-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: -1;
+    pointer-events: none; 
+    animation: bubbleAnimation 10s infinite;
+}
+/* Define the bubble animation */
+@keyframes bubbleAnimation {
+    0% {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+    50% {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 1px, transparent 1px);
+        background-size: 100px 100px;
+    }
+    100% {
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+        background-size: 50px 50px;
+    }
+}
+
+/* To simulate moving bubbles */
+.faq-section::after {
+    content: "";
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.5) 1px, transparent 1px);
+    background-size: 50px 50px;
+    animation: floatBubbles 10s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes floatBubbles {
+    0% {
+        transform: translateY(0) translateX(0);
+    }
+    100% {
+        transform: translateY(-100%) translateX(100%);
+    }
+}
+/* General styling for sponsors section */
+.sponsors h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+}
+/* Container for the sponsor logos */
+.sponsors-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+/* Image inside the flip container */
+.flip-image {
+    width: 200px;
+    height: 170px;
+    border-radius: 10px;
+    transition: transform 0.6s ease-in-out; /* Smooth flip transition */
+    transform-style: preserve-3d; /* Keeps the 3D effect on the image */
+    backface-visibility: hidden; /* Hides the back of the image */
+}
+/* Flip effect when hovering */
+.flip-container:hover .flip-image {
+    transform: rotateY(360deg); 
+}
+/* Optional: Styling to add shadow or highlight effect when hovered */
+.flip-container:hover .flip-image {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Adds shadow */
+}
+
+.event-details, .application-form, .event-objectives, .keynote-speakers, .sponsors, .faq-section, .contact-section, .blog-section {
+    padding: 60px 20px;
+    text-align: center;
+    
+}
+.application-form h2{
+    color: rgba(0, 140, 255, 0.79);
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   
+    
+}
+
+
+
+
+
+
+
+/* Default Styles (Mobile First Approach) */
+/* You already have the general styles for mobile. Now, we'll progressively enhance for larger screens. */
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .hero {
+        padding: 80px 20px;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .cta-btn {
+        font-size: 1rem;
+        padding: 8px 16px;
+    }
+    .registration-form {
+        width: 90%;
+    }
+    .event-detail {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+    .details-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .speaker-card {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .sponsors-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .payment-section {
+        padding: 30px 15px;
+    }
+    .contact-section {
+        padding: 20px;
+    }
+    .form-group input, .form-group textarea {
+        font-size: 0.9rem;
+    }
+    .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .card img {
+        height: 150px;
+    }
+    .faq-section {
+        padding: 30px 15px;
+    }
+    .accordion-header {
+        font-size: 1rem;
+    }
+}
+
+/* Tablet Styles */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hero {
+        padding: 100px 40px;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .cta-btn {
+        font-size: 1.1rem;
+        padding: 10px 20px;
+    }
+    .registration-form {
+        width: 80%;
+    }
+    .event-detail {
+        width: 45%;
+    }
+    .details-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .speaker-card {
+        width: 40%;
+    }
+    .payment-section {
+        padding: 40px 20px;
+    }
+    .contact-section {
+        padding: 30px 20px;
+    }
+    .card {
+        width: 45%;
+    }
+    .faq-section {
+        padding: 35px 20px;
+    }
+    .accordion-header {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop Styles */
+@media screen and (min-width: 1025px) {
+    .hero {
+        padding: 120px 60px;
+    }
+    .hero h1 {
+        font-size: 4rem;
+    }
+    .cta-btn {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+    .registration-form {
+        width: 60%;
+    }
+    .event-detail {
+        width: 30%;
+    }
+    .details-container {
+        justify-content: space-around;
+    }
+    .speaker-card {
+        width: 25%;
+    }
+    .payment-section {
+        padding: 50px 30px;
+    }
+    .contact-section {
+        padding: 40px 20px;
+    }
+    .card {
+        width: 30%;
+    }
+    .faq-section {
+        padding: 40px 25px;
+    }
+    .accordion-header {
+        font-size: 1.3rem;
+    }
+}
+@media (max-width: 768px) {
+    .cta-buttons {
+        flex-direction: column; /* Stack buttons on smaller screens */
+        gap: 10px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .registration-form {
+        width: 90%; /* Make the form full width on small screens */
+    }
+}
+
+
+.required {
+    color: red;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+/* Basic styling for the form */
+.registration-form {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    display: none; /* Initially hidden */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styling the table layout */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"] {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.close-btn {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Success message styling */
+.success-message {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #dff0d8;
+    border: 1px solid #d0e9c6;
+    border-radius: 4px;
+    color: #3c763d;
+    text-align: center;
+    display: none; /* Initially hidden */
+}
+
+
+
+
+
+
+
+

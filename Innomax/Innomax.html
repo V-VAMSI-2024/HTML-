@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NConverge Foundation Event</title>
+    <link rel="stylesheet" href="Innomax.css">
+</head>
+<body>
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to the NConverge Event 2024</h1>
+            <p>Your gateway to innovation and networking</p>
+            <div class="cta-buttons">
+                <a href="javascript:void(0)" class="cta-btn" id="registerBtn">
+                    <span class="register-text">Register Now</span>
+                    <span class="hover-text">Double Click</span>
+                </a>
+                <a href="#application" class="cta-btn">Submit Application</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Registration Form Section (Initially Hidden) -->
+    <section class="registration-form" id="registrationForm">
+        <h2>Register for the Event</h2>
+        <form id="registrationFormElement">
+            <table>
+                <tr>
+                    <td><label for="name">Full Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="phone">Phone Number:</label></td>
+                    <td><input type="tel" id="phone" name="phone" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="submit-btn">
+                        <button type="submit">Submit</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    
+        <!-- Close Form Button -->
+        <button class="close-btn" id="closeForm">Close</button>
+    
+        <!-- Registration Success Message (Initially Hidden) -->
+        <div class="success-message" id="successMessage">
+            <h3>Registration Successful!</h3>
+            <p>Thank you for registering for the NConverge Event 2024. We will be in touch with further details.</p>
+        </div>
+    </section>
+    
+    <!-- Event Details -->
+    <section id="event-details" class="event-details">
+        <h2>Event Details</h2>
+        <div class="details-container">
+            <div class="event-detail">
+                <h3>Date & Time</h3>
+                <p>Dec 30, 2024 | 10:00 AM - 5:00 PM</p>
+            </div>
+            <div class="event-detail">
+                <h3>Location</h3>
+                <p>City Convention Center, Downtown</p>
+            </div>
+            <div class="event-detail">
+                <h3>Agenda Highlights</h3>
+                <p>Innovation Talks, Workshops, Networking Sessions</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Startup Application Form -->
+    <section id="application" class="application-form">
+        <h2>Startup Award Application</h2>
+        <form id="startup-form" action="#" method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="startup-name">Name of Startup <span class="required">*</span></label>
+                <input type="text" id="startup-name" name="startup-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="founders-name">Founder(s) Name(s) <span class="required">*</span></label>
+                <input type="text" id="founders-name" name="founders-name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="alumni-id">JNV Alumni Association ID (if applicable)</label>
+                <input type="text" id="alumni-id" name="alumni-id">
+            </div>
+    
+            <div class="form-group">
+                <label for="industry-category">Industry Category <span class="required">*</span></label>
+                <select id="industry-category" name="industry-category" required>
+                    <option value="">Select Industry</option>
+                    <option value="Tech">Technology</option>
+                    <option value="Health">Health</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Education">Education</option>
+                    <option value="Retail">Retail</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label for="description">Description <span class="required">*</span></label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="attachments">Attachments (Pitch Deck/Docs) <span class="required">*</span></label>
+                <input type="file" id="attachments" name="attachments" accept=".pdf, .pptx, .docx" required>
+            </div>
+    
+            <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+        <div id="form-message"></div>
+    </section>
+    
+    <!-- Event Objectives -->
+    <section id="event-objectives" class="event-objectives">
+        <h2>Event Objectives</h2>
+        <p>Our goal is to bring together like-minded professionals, foster innovation, and drive meaningful conversations.</p>
+    </section>
+
+    <!-- Keynote Speakers -->
+    <section id="keynote-speakers" class="keynote-speakers">
+        <h2>Keynote Speakers</h2>
+        <div class="speakers-container">
+            <div class="speaker-card">
+                <img src="/src/speaker.jpg" alt="Speaker 1" loading="lazy">
+                <h3>Jane Doe</h3>
+                <p>Founder of InnovateX</p>
+            </div>
+            <div class="speaker-card">
+                <img src="/src/speaker2.jpg" alt="Speaker 2" loading="lazy">
+                <h3>John Smith</h3>
+                <p>CEO of TechFuture</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section id="sponsors" class="sponsors">
+        <h2>Sponsors</h2>
+        <div class="sponsors-container">
+            <div class="flip-container">
+                <img src="/src/spones.jpg" alt="Sponsor 1" class="flip-image" loading="lazy">
+            </div>
+            <div class="flip-container">
+                <img src="/src/sponer2.jpg" alt="Sponsor 2" class="flip-image" loading="lazy">
+            </div>
+            <div class="flip-container">
+                <img src="/src/spnser3.j[g.avif" alt="Sponsor 3" class="flip-image" loading="lazy">
+            </div>
+        </div>
+    </section>
+    
+    <!-- Hero Section with Call to Action -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to NConverge Foundation Event</h1>
+            <p>Make a donation or register today to support our mission!</p>
+        </div>
+    </section>
+
+    <section id="payment" class="payment-section">
+        <h2>Payment for Registration or Donation</h2>
+        <div class="payment-container">
+            <form id="payment-form">
+                <div class="form-group">
+                    <label for="amount">Amount ($)</label>
+                    <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+    
+                <!-- Payment Button -->
+                <div id="payment-button-container">
+                    <button type="submit" id="payment-button">Pay Now</button>
+                </div>
+            </form>
+        </div>
+    
+        <!-- Payment Confirmation Message -->
+        <div id="payment-message" class="payment-message"></div>
+    </section>
+
+    <section id="faq" class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <input type="checkbox" id="q1" class="accordion-toggle">
+                <label for="q1" class="accordion-header">
+                    <span class="plus-symbol">+</span> 
+                    What is the eligibility criteria for the event?
+                </label>
+                <div class="accordion-content">
+                    <p>The eligibility criteria for the event are...</p>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <input type="checkbox" id="q2" class="accordion-toggle">
+                <label for="q2" class="accordion-header">
+                    <span class="plus-symbol">+</span>
+                    How can I register for the event?
+                </label>
+                <div class="accordion-content">
+                    <p>You can register for the event by...</p>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <input type="checkbox" id="q3" class="accordion-toggle">
+                <label for="q3" class="accordion-header">
+                    <span class="plus-symbol">+</span>
+                    Can I participate in the event virtually?
+                </label>
+                <div class="accordion-content">
+                    <p>Yes, you can participate virtually by...</p>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <input type="checkbox" id="q4" class="accordion-toggle">
+                <label for="q4" class="accordion-header">
+                    <span class="plus-symbol">+</span>
+                    How can I apply for a startup award?
+                </label>
+                <div class="accordion-content">
+                    <p>To apply for a startup award, you need to...</p>
+                </div>
+            </div>
+    
+            <div class="accordion-item">
+                <input type="checkbox" id="q5" class="accordion-toggle">
+                <label for="q5" class="accordion-header">
+                    <span class="plus-symbol">+</span>
+                    Is there a fee for participating in the event?
+                </label>
+                <div class="accordion-content">
+                    <p>The event fee is...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" placeholder="Subject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            </div>
+
+            <button type="submit" id="submit-btn">Send Message</button>
+        </form>
+
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <p>Follow us on:</p>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+            <a href="https://in.linkedin.com/company/innomax-it-solutions" target="_blank">Linked</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="mailto:info@nconverge.org">Email Us</a>
+        </div>
+    </section>
+
+    <!-- Blog/Updates Section -->
+    <section id="blog" class="blog-section">
+        <h2>Latest Announcements & Updates</h2>
+
+        <div class="blog-cards">
+            <div class="card h">
+                <img src="/src/Event.jpg" alt="Event Update" loading="lazy">
+                <h3>Event Registration Now Open!</h3>
+                <p>We are excited to announce that registration for our upcoming event is now open! Join us for an unforgettable experience.</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <div class="card h">
+                <img src="/src/startup.jpg" alt="Startup Award" loading="lazy">
+                <h3>Startup Award Application Deadline</h3>
+                <p>Submit your applications for the Startup Award before the deadline. Get a chance to showcase your innovative ideas to the world.</p>
+                <a href="#">Apply Now</a>
+            </div>
+
+            <div class="card h">
+                <img src="/src/announcement.jpg" alt="Event Announcement" loading="lazy">
+                <h3>New Keynote Speaker Announced!</h3>
+                <p>We are thrilled to announce a new keynote speaker for our upcoming event! Learn more about them and what they will bring to the table.</p>
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 NConverge Foundation. All Rights Reserved.</p>
+    </footer>
+
+    <script src="Innomax.js"></script>
+</body>
+</html>
